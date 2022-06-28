@@ -1,0 +1,21 @@
+import requests, sys
+
+if len(sys.argv) <=2:
+	print "Bruteforce subdomain - Modo de Uso: python arquivo.py url arquivo.txt"
+else:
+	dominio = sys.argv[1]
+	file = open(sys.argv[2])
+	conteudo = file.read()
+	divisao = conteudo.splitlines()
+
+	for subdominio in divisao:
+		url = f"http://{subdominio}.{dominio}"
+	
+	try:
+		requests.get(url)
+
+	expect requests.ConnectionError:
+		pass
+	
+	else:
+		print("Subdominio Encontrado: ", url)
