@@ -10,8 +10,9 @@ while TRUE:
  x = str(random.randit(0, 254))
  y = str(random.randit(0, 254))
  z = str(random.randit(0, 254))
+ a = "."
  
- local = w + "." + x + "." + y + "." + z
+ local = w + a + x + a + y + a + z
  pacote_ip = IP(src = local, dst = ip)
  pacote_tcp = TCP(sport = 443, dport = porta)
  pacote = pacote_ip / pacote_tcp
