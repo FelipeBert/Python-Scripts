@@ -1,5 +1,4 @@
-#!/usr/bin/python
-#import sys, socket
+import sys, socket
 
 if len(sys.argv) <= 1:
 	print "Portscan - Modo de uso: Python arquivo.py 192.168.0.1"
